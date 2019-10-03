@@ -1,0 +1,594 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "box1" 
+        "box2"
+        "box3"
+        "box4"
+        "box5";
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: gainsboro;
+}
+
+/*Sticky Navigationsbar i toppen*/
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* background-color: gainsboro; */
+    background-color: transparent;
+    height: 45px;
+    width: 100%;
+    z-index: 1;
+}
+.nav {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin-right: -60%;
+}
+.logo {
+    flex: 1 1 auto;
+    margin-left: 10%;
+    font-family: 'Comfortaa';
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 20px;
+    height: 25px;
+    text-align: center;
+    border: 2.5px solid #fff;
+    position: absolute;
+    display: block;
+    width: 160px;
+    left: -7%;
+    bottom: -12%;
+}
+.logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+a {
+    margin: 15px;
+    color: #fff;
+    font-family: 'Comfortaa';
+    text-decoration: none;
+}
+a:hover {
+    color: #fff;
+    text-decoration: underline;   
+}
+
+/*FORSIDE*/
+.box1 {
+    height: 100vh;
+    background-image: url(../images/fp_background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.box1 h1 {
+    font-family: 'Comfortaa';
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none; 
+    display: block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    text-align: center; 
+    width: 300px;
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%);
+    border: 4px solid #fff;
+}
+.box1 h2 {
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none; 
+    display: block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    text-align: center; 
+    width: 300px;
+    left: 50%;
+    bottom: 43.5%;
+    transform: translateX(-50%);
+}
+.box1 p {
+    position: absolute;
+    left: 77%;
+    bottom: 14%;
+    color: #fff;
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    display: block;
+}
+.box1 img {
+    position: absolute;
+    height: 45px;
+    width: auto;
+    left: 2%;
+    bottom: 3%;
+}
+/*Bevægende pile*/
+.box1 .indicator {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: transparent;
+    transform: rotate(45deg);
+    left: 46%;
+    bottom: -70%;
+}
+.box1 .indicator span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    border-right: 4.5px solid #fff;
+    border-bottom: 4.5px solid #fff;
+    animation: animate 1s linear infinite;
+}
+.box1 .indicator span:nth-child(1) {
+    top: -30px;
+    left: -30px;
+    animation-delay: 0s;
+}
+.box1 .indicator span:nth-child(2) {
+    top: -15px;
+    left: -15px;
+    animation-delay: 0.2s;
+}
+.box1 .indicator span:nth-child(3) {
+    top: 0px;
+    left: 0px;
+    animation-delay: 0.4s;
+}
+.box1 .indicator span:nth-child(4) {
+    top: 15px;
+    left: 15px;
+    animation-delay: 0.6s;
+}
+.box1 .indicator span:nth-child(5) {
+    top: 30px;
+    left: 30px;
+    animation-delay: 0.8s;
+}
+@keyframes animate {
+    0%
+    { border-color: #fff;
+        transform: translate(0,0);
+    }
+    20%
+    { border-color: #fff;
+        transform: translate(15px,15px);
+    }
+    20.1%,100%
+    { border-color: #faebd2;
+    }
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+/*Portfolio knap*/
+.btn {
+    position: absolute;
+    left: 78%;
+    bottom: 4%;
+    color: #fff;
+    background-color: transparent;
+    font-family: ; 
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: inline-block;
+    border: #fff 2px outset;
+    padding: 6px 45px;
+}
+.port:hover {
+    border: solid 4px #fff;
+    text-decoration: none;
+}
+
+/*OM MIG SIDE*/
+.box2 {
+    height: 100vh;
+    background-color: gainsboro;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.box2 img {
+    position: absolute;
+    height: 350px;
+    width: auto;
+    left: 30%;
+    bottom: -72%;
+    transform: translateX(-50%);
+    border: 4px solid #fff;
+    filter: brightness(100%);
+}
+.box2 h1 {
+    font-family: 'Comfortaa';
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none; 
+    display: block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    text-align: center; 
+    width: 300px;
+    left: 50%;
+    bottom: -50%;
+    transform: translateX(-50%);
+    border: 4px solid #fff;
+    background-color: gainsboro;
+    
+}
+.box2 h2 {
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    left: 73%;
+    bottom: -20%;
+    line-height: 140%;
+    text-decoration: underline;
+}
+.box2 p {
+    font-family: 'Comfortaa';
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    left: 67%;
+    bottom: -83%;
+    line-height: 140%;
+    max-width: 300px;
+    font-style: italic;
+}
+/*PROJEKTER SIDE*/
+.box3 {
+    height: 100vh;
+    background-image: url(../images/bx3_background.jpg);
+    background-color: #fff;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.box3 h1 {
+    font-family: 'Comfortaa';
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none; 
+    display: block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    text-align: center; 
+    width: 300px;
+    left: 50%;
+    bottom: -150%;
+    transform: translateX(-50%);
+    border: 4px solid #fff;
+}
+.box3 h2 {
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    left: 70%;
+    bottom: -125%;
+    line-height: 140%;
+    text-decoration: underline;
+}
+.box3 p {
+    font-family: 'Comfortaa';
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    left: 70%;
+    bottom: -177%;
+    line-height: 140%;
+    max-width: 300px;
+    font-style: italic;
+}
+/*Bevægende pile*/
+.box3 .indicator {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(45deg);
+    left: 80%;
+    bottom: -85%;
+}
+.box3 .indicator span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    animation: animate 1s linear infinite;
+}
+.box3 .indicator span:nth-child(1) {
+    top: -30px;
+    left: -30px;
+    animation-delay: 0s;
+}
+.box3 .indicator span:nth-child(2) {
+    top: -15px;
+    left: -15px;
+    animation-delay: 0.2s;
+}
+.box3 .indicator span:nth-child(3) {
+    top: 0px;
+    left: 0px;
+    animation-delay: 0.4s;
+}
+.box3 .indicator span:nth-child(4) {
+    top: 15px;
+    left: 15px;
+    animation-delay: 0.6s;
+}
+.box3 .indicator span:nth-child(5) {
+    top: 30px;
+    left: 30px;
+    animation-delay: 0.8s;
+}
+@keyframes animate {
+    0%
+    { border-color: #fff;
+        transform: translate(0,0);
+    }
+    20%
+    { border-color: #fff;
+        transform: translate(15px,15px);
+    }
+    20.1%,100%
+    { border-color: #faebd2;
+    }
+}
+
+/*PORTFOLIO SIDE*/
+.box4 {
+    height: 100vh;
+    background-color: gainsboro;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.box4 h1 {
+    font-family: 'Comfortaa';
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none; 
+    display: block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    text-align: center; 
+    width: 300px;
+    left: 50%;
+    bottom: -256%;
+    transform: translateX(-50%);
+    /*border: 4px solid #fff;*/
+}
+/*Portfolio-galleri*/
+.box4 .textOverImage {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    font-family: 'Comfortaa';
+    letter-spacing: 1px;
+    line-height: 140%;
+    float: left;
+    bottom: -7%;
+    left: 3.6%;
+    margin: 30px;
+    background-size: 100%;
+    border: 4px solid #fff;
+    transition: 0.5s;
+}
+.box4 .textOverImage:hover {
+    background-size: 110%;
+}
+.box4 .textOverImage:after {
+    position: absolute;
+    top: 90%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    white-space: pre-wrap;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    padding: 8px;
+    content: attr(data-text);
+    transition: 0.5s;
+}
+.box4 .textOverImage:hover:after {
+    top: 0;
+    padding: 8px;
+    background-color: rgba(0,0,0,0.6);
+}
+.box4 .textOverImage:first-line {
+    color: #fff;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 60%;
+    text-decoration: underline;
+}
+
+/*KONTAKT SIDE*/
+.box5 {
+    height: 100vh;
+    background-image: url(../images/bx5_background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 40px, 0;
+}
+.box5 h1 {
+    font-family: 'Comfortaa';
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none; 
+    display: block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    text-align: center; 
+    width: 300px;
+    left: 50%;
+    bottom: -320%;
+    transform: translateX(-50%);
+    border: 4px solid #fff;
+}
+.box5 p1 {
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    left: 15%;
+    bottom: -344%;
+    line-height: 140%;
+    font-style: italic;
+}
+.box5 p2 {
+    font-family: 'Comfortaa';
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    left: 31%;
+    bottom: -350%;
+    line-height: 140%;
+}
+.box5 border {
+    width: 100px;
+    height: 10px;
+    background: #34495e;
+    margin: 40px auto;
+}
+/*KONTAKTFORMULAR*/
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+    position: absolute;
+    bottom: -385%;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 40%;
+}
+.contact-form-text {     /*Kontaktformular tekstfelter*/
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: transparent;
+    padding: 20px 40px;
+    outline: none;
+    color: #ddd;
+    transition: 0.5s;
+    border: 4px solid #fff;
+}
+.contact-form-text:focus {
+    box-shadow: 0 0 10px 2px gainsboro;
+}
+textarea.contact-form-text {
+    resize: none;
+    height: 120px;
+}
+.contact-form-btn {    /*Kontaktformular send-knap*/
+    float: right;
+    border: 0;
+    background: grey;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.contact-form-btn:hover {
+    background: gainsboro;
+}
+.box5 img {
+    position: absolute;
+    height: 45px;
+    width: auto;
+    left: 2%;
+    bottom: -397%;
+}
